@@ -39,13 +39,13 @@ BOOL WINAPI DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
     fluid_refCount++;
     if (1 == fluid_refCount) {
       fluid_set_hinstance((void*) hModule);
-      fluid_win32_create_window();
+      // fluid_win32_create_window();
     }
     break;
   case DLL_PROCESS_DETACH:
     fluid_refCount--;
     if (fluid_refCount == 0) {
-      fluid_win32_destroy_window();
+      // fluid_win32_destroy_window();
     }
     break;
   }
